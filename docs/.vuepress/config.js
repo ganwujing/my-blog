@@ -1,12 +1,18 @@
 module.exports = {
     title: '干物靖的博客',
     description: 'this is a personal website',
-    plugins: [
-
-    ],
     themeConfig: {
-        logo: '/assets/img/logo.png',
-        sidebar: {sidebar:'auto'},
+        sidebar: {
+            '/technology/frame/angular/':[
+                '',
+                '组件',
+            ],
+            '/travel/':[
+                '',
+                '黄山'
+            ]
+
+        },
         nav: [
             {
                 text: '首页',
@@ -22,11 +28,11 @@ module.exports = {
                         items: [
                             {
                                 text: 'Angular',
-                                link: '/technology/frame/angular'
+                                link: '/technology/frame/angular/'
                             },
                             {
                                 text: 'Vue',
-                                link: '/technology/frame/vue'
+                                link: '/technology/frame/vue/'
                             },
                         ]
                     },
@@ -36,33 +42,49 @@ module.exports = {
                         items: [
                             {
                                 text: '计算机网络',
-                                link: '/technology/basic/computer-network'
+                                link: '/technology/basic/computer-network/'
                             },
                             {
                                 text: '数据结构',
-                                link: '/technology/basic/data-structure'
+                                link: '/technology/basic/data-structure/'
                             },
                             {
                                 text: '操作系统',
-                                link: '/technology/basic/operating-system'
+                                link: '/technology/basic/operating-system/'
                             },
                         ]
                     },
                     {
                         text: '算法',
-                        link: '/technology/algorithm'
+                        link: '/technology/algorithm/'
                     },
                 ]
 
             },
             {
                 text: '旅行',
-                link: '/travel',
+                link: '/travel/',
             },
             {
                 text: '阅读',
                 link: '/reading',
             },
         ],
+        logo: '/assets/img/logo.png',
+        lastUpdated: '最后更新',
+    },
+    plugins: {
+        '@vuepress/last-updated': {
+            transformer: (timestamp, lang) => {
+                const time=new Date(timestamp)
+                const time_str = time.getFullYear()+'.'
+                                +(time.getMonth()+1)+'.'
+                                +time.getDate()+' '
+                                +time.getHours()+':'
+                                +time.getMinutes()+':'
+                                +time.getSeconds();
+                return time_str;
+            }
+        }
     }
 }
