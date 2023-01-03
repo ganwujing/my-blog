@@ -27,4 +27,4 @@ jobs:
         git init
         git add -A
         git commit -m "Deploy"
-        git push -f git@github.com:ganwujing/ganwujing.github.io.git master
+        git push -f https://${{secrets.TOKEN_FOR_GANWUJING_GITHUB_IO}}@github.com/ganwujing/ganwujing.github.io.git
