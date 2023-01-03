@@ -5,11 +5,15 @@ module.exports = {
         sidebar: {
             '/technology/frame/angular/':[
                 '',
-                '组件',
             ],
             '/travel/':[
                 '',
-                '黄山'
+                '黄山',
+                '彩云之南'
+            ],
+            '/reading/':[
+                '',
+                '对立之美'
             ]
 
         },
@@ -67,7 +71,7 @@ module.exports = {
             },
             {
                 text: '阅读',
-                link: '/reading',
+                link: '/reading/',
             },
         ],
         logo: '/assets/img/logo.png',
