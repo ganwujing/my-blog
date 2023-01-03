@@ -23,7 +23,7 @@ jobs:
         npm run docs:build
     - name: Deploy
       run: |
-        cd cd docs/.vuepress/dist
+        cd docs/.vuepress/dist
         git init
         git add -A
         git commit -m "Deploy"
