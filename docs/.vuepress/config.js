@@ -8,8 +8,7 @@ module.exports = {
             ],
             '/travel/':[
                 '',
-                '黄山',
-                '彩云之南'
+                '黄山'
             ],
             '/reading/':[
                 '',
